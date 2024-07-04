@@ -12,7 +12,13 @@ export default function Home() {
       <MaxWidthWrapper className="pt-0">
         <div className="flex items-center justify-between w-full">
           <div className="w-1/2">
-            <Image alt="front_page" src={profilePic} className="w-full" />
+            <Image
+              alt="front_page"
+              src={profilePic}
+              className="w-full"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              priority
+            />
           </div>
           <div className="w-1/2 flex flex-col items-center self-center">
             <AnimatedText

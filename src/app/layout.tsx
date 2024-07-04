@@ -3,6 +3,7 @@ import { Montserrat } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import { ThemeProvider } from 'next-themes'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -20,9 +21,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <main className="w-full min-h-screen">
-          <Navbar />
-          {children}
-          <Footer />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </main>
       </body>
     </html>
