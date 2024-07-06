@@ -35,7 +35,7 @@ const AnimatedText = ({
   className?: string
 }) => {
   return (
-    <div className="w-full flex justify-center items-center overflow-hidden">
+    <div className="w-full mx-auto flex justify-center items-center text-center overflow-hidden sm:py-0">
       <motion.h1
         className={cn(
           `inline-block w-full font-bold capitalize text-8xl ${className}`

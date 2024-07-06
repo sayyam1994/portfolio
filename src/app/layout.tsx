@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { ThemeProvider } from 'next-themes'
+import { AnimatePresence } from 'framer-motion'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
